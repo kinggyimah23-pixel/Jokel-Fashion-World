@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultation Booking</title>
+  <link rel="stylesheet" href="book_consultation.css">
+</head>
+<body>
+  <header>
+    <div class="logo-menu">
+      <h1 class="logo">Jokel Fashion World</h1>
+      <div class="menu-group">
+        <a href="Jokel Fashion World.html" class="home-btn" title="Back to Home">
+          <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12L12 3l9 9" />
+            <path d="M9 21V9h6v12" />
+          </svg>
+          <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <nav>
+      <a href="Jokel Fashion World.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="subpage consultation-page">
+    <h2>Book a Consultation</h2>
+    <p>Schedule your personalized session below. Fill out your details and we’ll get in touch to confirm your booking.</p>
+
+    <form class="booking-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+      </div>
+
+      <div class="form-group full-width">
+        <label for="message">Additional Details</label>
+        <textarea id="message" name="message" placeholder="Describe your needed attire..." rows="5"></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Submit Booking</button>
+    </form>
+  </section>
+</body>
+</html>

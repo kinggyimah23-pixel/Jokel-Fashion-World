@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Jokel Fashion World</title>
+  <link rel="stylesheet" href="about_us.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header>
+    <div class="logo-menu">
+      <div class="menu-group" id="menuSection">
+        <div class="menu-icon" id="menuToggle">&#9776;</div>
+        <h1 class="menu-text">Menu</h1>
+
+        <div class="dropdown" id="menuDropdown">
+          <a href="book_consultation.html">Book a Consultation</a>
+          <a href="enrollment_now.html">Enroll Now</a>
+          <a href="courses.html">Courses</a>
+          <a href="portfolio_gallery.html">Portfolio / Gallery</a>
+        </div>
+      </div>
+    </div>
+
+    <nav id="navMenu">
+      <a href="Jokel Fashion World.html">
+        <span class="arrow-left"></span>
+        <span class="home-text">Home</span>
+      </a>
+      <a href="about_us.html" class="active">About Us</a>
+
+      <div class="contact-dropdown-wrapper">
+        <a href="#" id="contactLink">Contact Us</a>
+        <div class="dropdown contact-dropdown" id="contactDropdown">
+          <a href="tel:+23355623555">Phone</a>
+          <a href="https://wa.me/233263384338" target="_blank">WhatsApp</a>
+          <a href="https://www.tiktok.com/@jokelfashionworld" target="_blank">TikTok</a>
+          <a href="https://www.youtube.com/@JokelFashionWorld" target="_blank">YouTube</a>
+          <a href="https://www.instagram.com/jokel_fashion_world" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/joannyluv123" target="_blank">Facebook</a>
+          <a href="mailto:info@joannyluv44@gmail.com">E-mail</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="subpage about-section">
+    <h2>About Jokel Fashion World</h2>
+    <p>
+      <strong>Jokel Fashion World</strong> is more than a name — it’s a movement.  
+      Born from passion, shaped by craftsmanship, and powered by vision, Jokel Fashion World blends artistry with education to redefine fashion for a new era.
+    </p>
+
+    <p>
+      From the heart of Ghana to the global stage, we train the next generation of visionary designers, stylists, and entrepreneurs.
+      Our mission is to transform creativity into careers and raw ideas into runway realities.
+    </p>
+
+    <p>
+      Whether you dream of couture design, pattern mastery, modeling, or fashion business leadership, Jokel Fashion World is where your story begins.  
+      We don’t just create fashion — we craft legacies.
+    </p>
+
+    <div class="vision-mission">
+      <div class="vision">
+        <h3>Our Vision</h3>
+        <p>
+          To be most recognized hub for fashion excellence, innovation, and sustainable design worldwide — setting trends that echo across continents.
+        </p>
+      </div>
+
+      <div class="mission">
+        <h3>Our Mission</h3>
+        <p>
+          To inspire and empower individuals to master the art of fashion through creativity, education, mentorship, and opportunity.
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <h3>Our Journey</h3>
+      <ul>
+        <li><span>2015</span> — The spark ignited. Jokel Fashion began as a small atelier teaching basic tailoring.</li>
+        <li><span>2018</span> — Moving on to greater heights, we expanded into the realm of business</li>
+        <li><span>2021</span> — Our first graduates showcased collections.</li>
+        <li><span>2025</span> — Working on exapnding our school and business to greater heightss</li>
+      </ul>
+    </div>
+
+    <a href="enrollment_now.html" class="btn">Join Our Legacy</a>
+  </main>
+
+  <script>
+    const menuSection = document.getElementById('menuSection');
+    const menuDropdown = document.getElementById('menuDropdown');
+    menuSection.addEventListener('click', () => menuDropdown.classList.toggle('show'));
+
+    const contactLink = document.getElementById('contactLink');
+    const contactDropdown = document.getElementById('contactDropdown');
+    contactLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      contactDropdown.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!menuSection.contains(e.target)) menuDropdown.classList.remove('show');
+      if (!contactLink.contains(e.target)) contactDropdown.classList.remove('show');
+    });
+
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

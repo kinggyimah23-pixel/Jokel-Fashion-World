@@ -1,0 +1,227 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background: #2C2646;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  background: transparent;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #8E72FF;
+  letter-spacing: 2px;
+}
+
+/* Home & Arrow Button */
+.home-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.home-icon,
+.arrow-icon {
+  width: 26px;
+  height: 26px;
+  color: currentColor;
+  stroke: #fff;
+  transition: transform 0.4s ease, stroke 0.4s ease;
+}
+
+/* Hover Animations */
+.home-btn:hover {
+  color: #8E72FF;
+  transform: scale(1.05);
+}
+
+.home-btn:hover .home-icon {
+  transform: rotate(-10deg);
+  stroke: #8E72FF;
+}
+
+.home-btn:hover .arrow-icon {
+  transform: translateX(-4px);
+  stroke: #8E72FF;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #A89EFF;
+  transform: scale(1.05);
+}
+
+/* Subpage Section */
+.subpage {
+  min-height: 100vh;
+  padding: 160px 100px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.subpage h2 {
+  font-size: 2.8rem;
+  color: #8E72FF;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.subpage p {
+  font-size: 1.1rem;
+  color: #DAD8FF;
+  max-width: 700px;
+  margin-bottom: 35px;
+  line-height: 1.7;
+}
+
+/* Form Container */
+.booking-form {
+  width: 100%;
+  max-width: 800px;
+  background: #322D4F;
+  padding: 45px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: left;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  color: #BFB9FF;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #4A4268;
+  color: #fff;
+  font-size: 1rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  background: #554C75;
+  box-shadow: 0 0 8px #8E72FF;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+select {
+  cursor: pointer;
+}
+
+/* Button */
+.btn-submit {
+  background: #8E72FF;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.btn-submit:hover {
+  background: #A89EFF;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(142, 114, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  header {
+    padding: 20px 40px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .subpage {
+    padding: 130px 30px 60px;
+  }
+
+  .booking-form {
+    padding: 25px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jokel Fashion World</title>
+  <link rel="stylesheet" href="Jokel_Fashion_World.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header>
+    <div class="logo-menu">
+      <div class="menu-group" id="menuSection">
+        <div class="menu-icon" id="menuToggle">&#9776;</div>
+        <h1 class="menu-text">Menu</h1>
+
+        <!-- Dropdown under "Menu" -->
+        <div class="dropdown" id="menuDropdown">
+          <a href="book_consultation.html">Book a Consultation</a>
+          <a href="enrollment_now.html">Enroll Now</a>
+          <a href="courses.html">Courses</a>
+          <a href="portfolio.html">Portfolio / Gallery</a>
+        </div>
+      </div>
+    </div>
+
+    <nav id="navMenu">
+      <a href="about_us.html">About Us</a>
+      <div class="contact-dropdown-wrapper">
+        <a href="#" id="contactLink">Contact Us</a>
+
+        <!-- Dropdown under "Contact Us" -->
+        <div class="dropdown contact-dropdown" id="contactDropdown">
+          <a href="tel:+23355623555">Phone</a>
+          <a href="https://wa.me/233263384338" target="_blank">WhatsApp</a>
+          <a href="https://www.tiktok.com/@jokelfashionworld" target="_blank">TikTok</a>
+          <a href="https://www.youtube.com/@JokelFashionWorld" target="_blank">YouTube</a>
+          <a href="https://www.instagram.com/jokel_fashion_world" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/joannyluv123" target="_blank">Facebook</a>
+          <a href="mailto:info@joannyluv44@gmail.com">E-mail</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="overlay"></div>
+
+      <div class="hero-content">
+        <h2>Jokel Fashion World</h2>
+        <p>Where Imagination Becomes Fashion</p>
+      </div>
+
+      <div class="image-container">
+        <img
+          src="./4a7df0a5-c608-4eeb-9446-617247d2aa57.JPG"
+          alt="Fashion Display"
+        />
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // MENU DROPDOWN
+    const menuSection = document.getElementById('menuSection');
+    const menuDropdown = document.getElementById('menuDropdown');
+
+    menuSection.addEventListener('click', () => {
+      menuDropdown.classList.toggle('show');
+    });
+
+    // CONTACT DROPDOWN
+    const contactLink = document.getElementById('contactLink');
+    const contactDropdown = document.getElementById('contactDropdown');
+
+    contactLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      contactDropdown.classList.toggle('show');
+    });
+
+    // Close dropdowns when clicking elsewhere
+    document.addEventListener('click', (e) => {
+      if (!menuSection.contains(e.target)) menuDropdown.classList.remove('show');
+      if (!contactLink.contains(e.target))
+        contactDropdown.classList.remove('show');
+    });
+
+    // MOBILE MENU TOGGLE
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
